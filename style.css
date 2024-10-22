@@ -17,7 +17,7 @@ header, nav, main,footer {
     margin: 0 auto;
 }
 header {
-    min-height: 8rem;
+    min-height: 15rem;
     background-color: pink;
 }
 nav {
@@ -84,6 +84,20 @@ ul li a:hover{
     background-color: rgb(185, 109, 255);
     color: rgb(0, 98, 0);
     transition: 500ms;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+h1, h2, p {
+    width: 50%;
+    background-color: cadetblue;
+    margin: 0.2rem;
+    border: 0.3rem solid green;
+    text-align: center;
+
 }
 /* === MEDIA QUERY === */
 /* Código página en tablet*/
