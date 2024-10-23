@@ -6,7 +6,15 @@
     <title>Proyecto básico</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
+        .form span {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 200;
+            font-style: italic;
+        }
+        input[type="radio"] {
+            accent-color: red;
+        }
         
     </style>
 </head>
@@ -41,15 +49,65 @@
             <article class="form">
                 
                 <form action="recogida.php" method="get">
+                    <!-- Ingresar datos -->
                     <label for="primero">Nombre
-                        <input type="text" id="primero" name="nombre" placeholder="tu nombre">
+                        <input type="text" id="primero" value="Angel" name="nommbre" placeholder="tu nombre" required>
                     </label>
                     
                     <label for="segundo">Apellido
-                        <input type="text" id="segundo" name="apellido" placeholder="tu apellido">
+                        <input type="text" id="segundo" value="Perez" name="apeellido" placeholder="tu apellido">
                     </label>
 
-                    <input type="submit" value="ENVIAR">
+                    <!-- input checkbox -->
+                    <p>Deporte que practicas:</p>
+                    <label for="deporte1"> Atletismo
+                        <input id="deporte1" type="checkbox" value="1" name="deporte1">
+                    </label>
+
+                    <label for="deporte2"> Natación
+                        <input id="deporte2" type="checkbox" value="2" name="deporte2" checked>
+                    </label>
+
+                    <label for="deporte3"> Gimnasia
+                        <input id="deporte3" type="checkbox" value="3" name="deporte3">
+                    </label>
+                   
+                    <!-- input radial -->
+                    <br>
+                    <p>¿Dónde vives?</p>
+                    <label for="procedencia1">Bizkaia
+                        <input id="procedencia1" type="radio" value="bizkaia" name="procedencia" required >
+                    </label>
+
+                    <label for="procedencia2">Araba
+                        <input id="procedencia2" type="radio" value="araba" name="procedencia" required>
+                    </label>
+
+                    <label for="procedencia3">Gipuzkoa
+                        <input id="procedencia3" type="radio" value="gipuzkoa" name="procedencia" required>
+                    </label>
+
+                    <label for="procedencia4">Otro lugar
+                        <input id="procedencia4" type="radio" value="otro" name="procedencia" required>
+                    </label>
+                    <br>
+
+                    <p>¿Cómo te desplazas al centro?</p>
+                    <!-- Select - Lista de seleccion // con el atributo multiple dentro del select, para seleccionar varias opciones-->
+                    <select name="transporte" id="desplazamiento">
+                        <option value=""> </option>
+                        <option value="1">Autobus</option>
+                        <option value="2" selected>Metro</option>
+                        <option value="3">Coche propio</option>
+                        <option value="4">Helicoptero</option>
+                        <option value="5">Otro</option> 
+
+                    </select>
+
+                    <br>
+                    <!-- <input type="submit" value="ENVIAR"> -->
+                    <button type="reset">Resetear</button>
+                    <button type="submit"><span>Enviar</span></button>
 
                 </form>
 
