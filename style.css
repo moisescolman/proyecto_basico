@@ -131,6 +131,13 @@ article.form {
     min-height: 20rem;
     border: 0.2rem solid blue;
 }
+/* footer con imagen de fondo */
+footer {
+    background-image: url("img_corporativo/pattern.png");
+    background-size: 8.5%;
+    /* repeat-x: repite en horizontal */
+    background-repeat: repeat-x;
+}
 
 /* === MEDIA QUERY === */
 /* Código página en tablet*/
