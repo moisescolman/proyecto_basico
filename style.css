@@ -35,8 +35,13 @@ main {
     min-height: 60rem;
     background-color: lightblue;
     display: flex;
-    justify-content: space-around;
+    /* flex star pega los elementos, a su inicio */
+    justify-content: flex-start;
+    /* flex-wrap para que los siguientes elementos caigan a la siguiente linea */
     flex-wrap: wrap;
+    /* gap para espacio entre las elementos */
+    gap: 0.3rem;
+
 }
 footer {
     min-height: 7rem;
@@ -45,12 +50,16 @@ footer {
 .ponerBorde {
     border: 0.3rem solid black;
 }
-main div {
+main img {
+    width: 32%;
+}
+/* DIVS DE LA CONFIGURACIÓN INICIAL */
+/* main div {
     width: 30%;
     min-height: 5rem;
     background-color: lightgray;
     border: 0.2rem solid red;
-}
+} */
 .izda {
     background-color: rgba(221, 172, 13, 0.569);
 }
@@ -140,27 +149,39 @@ footer {
 }
 
 /* === MEDIA QUERY === */
+
 /* Código página en tablet*/
-
-
-/* Código página en smartphone*/
 @media screen and (max-width:900px) {
     body{
         background-color: aqua;
+        padding-top: 0;
     }
-    main div {
+    header {
+        display: none;
+    }
+    main {
+        justify-content: space-between;
+    }
+    main img {
         width: 45%;
+    }
+    nav {
+        position: static;
     }
     nav ul {
         flex-direction: column;
     }
 }
 
+/* Código página en smartphone*/
 @media only screen and (max-width:602px) {
     body{
         background-color: blue;
     }
-    main div {
+    main {
+        justify-content: center;
+    }
+    main img {
         width: 90%;
     }
 
